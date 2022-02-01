@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="StudentWebApp.UserInterface.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1 style="color:brown">SCHOOL MANAGEMENT SYSTEM</h1>
+            <div style="background-color:coral">
+                 <a href="Home.aspx"><b>Home</b></a>
+                   <a href="Teacher.aspx"><b>Teacher</b></a>
+                    <a href="Student.aspx"><b>Student</b></a>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
