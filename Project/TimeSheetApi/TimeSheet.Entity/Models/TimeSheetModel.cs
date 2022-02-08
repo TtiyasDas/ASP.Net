@@ -8,19 +8,26 @@ namespace TimeSheet.Entity.Models
 {
     public class TimeSheetModel
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Required]
-        public int TimeSheetID { get; set; }
-        public Project Project { get; set; }
-        [ForeignKey("Project")]
-        public int ProjectID { get; set; }
-        public Employee Employee { get; set; }
-        [ForeignKey("Employee")]
-        public int EmpID { get; set; }
-        public string TimeFrom { get; set; }
-        public string TimeTo { get; set; }
-        public decimal Hours { get; set; }
-        public string Status { get; set; }
+            [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+            public int TimeSheetID { get; set; }
 
+            public Project project { get; set; }
+            [ForeignKey("project")]
+            public int ProjectID { get; set; }
+
+            public Employee employee { get; set; }
+            [ForeignKey("employee")]
+            public int EmpID { get; set; }
+
+            public string Date { get; set; }
+
+            public string TimeFrom { get; set; }
+
+            public string TimeTo { get; set; }
+
+            public decimal Hours { get; set; }
+
+            public string Status { get; set; }
+
+        }
     }
-}
