@@ -16,7 +16,8 @@ namespace StudentMVC.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var studentList = _studentDbContext.Student.ToList();
+            return View(studentList);
         }
         public IActionResult StudentEntity()
         {
@@ -24,6 +25,17 @@ namespace StudentMVC.Controllers
         }
         [HttpPost]
         public IActionResult StudentEntity(Student student)
+        {
+            _studentDbContext.Student.Add(student);
+            _studentDbContext.SaveChanges();
+            ViewBag.message = "Student Details Saved Successfully";
+            return View();
+        }
+        public IActionResult EditStudent(int Roll)
+        {
+            return View();
+        }
+        public IActionResult DeleteStudent(int Roll)
         {
             return View();
         }

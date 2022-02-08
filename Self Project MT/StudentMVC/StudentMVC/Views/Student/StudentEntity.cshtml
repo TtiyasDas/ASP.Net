@@ -3,6 +3,11 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+}
+<hr />
+<a asp-action="Index">Show Student Details</a>
+<hr />
+
     <form method="post">
         <div>
             <table>
@@ -40,6 +45,10 @@
                 </tr>
             </table>
             <input type="submit" value="Save" />
+        </div>
+        <hr />
+        <div>
+            @ViewBag.message
         </div>
     </form>
 }

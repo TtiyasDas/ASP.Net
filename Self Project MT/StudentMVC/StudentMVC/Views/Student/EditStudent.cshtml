@@ -1,0 +1,54 @@
+﻿@model StudentMVC.Models.Student
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<hr />
+<a asp-action="Index">Show Student Details</a>
+<hr />
+
+<h2>Edit Student</h2>
+<form method="post">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Roll
+                </td>
+                <td>
+                   <input type ="text" asp-for="Roll"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" asp-for="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="text" asp-for="Email" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password
+                </td>
+                <td>
+                    <input type="text" asp-for="Psw" />
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Save" />
+    </div>
+    <hr />
+    <div>
+        @ViewBag.message
+    </div>
+</form>
